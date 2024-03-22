@@ -10,3 +10,9 @@ Linkage disequilibrium decay, or the distribution of correlation between SNPs as
 
 ## Multimapper Density
 One crucial step in the data processing steps for population genetics studies is mapping reads to a reference genome. 
+
+
+--------------------------------------------------------------------------------------------------------------
+## Dealing with strange ploisies
+
+The folder MultiPloidy_VCF_tools contains scripts that handle vcf files containing individuals with various ploidies!
