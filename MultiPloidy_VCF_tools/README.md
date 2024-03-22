@@ -9,11 +9,11 @@ These scripts were designed to deal with vcf that contain individuals with diffe
 This tool deals sets the heterozygous positions of haploid indivisuals to missing.
 Necessary inputs:
 
-  A VCF file
+ * A VCF file
 
-  A list of the haploid individuals in the vcf file. One individual per line.
+ * A list of the haploid individuals in the vcf file. One individual per line.
   
-  The number of header lines in the vcf file.
+ * The number of header lines in the vcf file.
   
 
 Comments:
