@@ -1,3 +1,9 @@
+##############################################################
+##                                                          ##
+## Written by Demetris Taliadoros. Last updated 22/03/2024  ##
+##                                                          ##
+##############################################################
+
 # Import necessary modules
 
 import pandas as pd
