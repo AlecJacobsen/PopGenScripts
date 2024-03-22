@@ -15,7 +15,7 @@ Necessary inputs:
   
  * The number of header lines in the vcf file.
   
-Usage: set_hetero_haploid_to_missing -vcf file.vcf -l list_of_haploids_in_vcf.txt -r number_of_vcf_heder_lines_minus_1
+Usage: set_hetero_haploid_to_missing.py -vcf file.vcf -l list_of_haploids_in_vcf.txt -r number_of_vcf_heder_lines_minus_1
 
 Comments:
 
