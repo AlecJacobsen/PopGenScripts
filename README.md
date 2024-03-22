@@ -13,6 +13,6 @@ One crucial step in the data processing steps for population genetics studies is
 
 
 --------------------------------------------------------------------------------------------------------------
-## Dealing with strange ploisies
+## Dealing with strange ploidies
 
 The folder MultiPloidy_VCF_tools contains scripts that handle vcf files containing individuals with various ploidies!
