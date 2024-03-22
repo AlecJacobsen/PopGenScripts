@@ -19,7 +19,7 @@ Usage: GC_content.py -G reference.fasta -w window size -s step -o output.txt
 
 Necessary files:
   
-  * A reference genome in fasta form
+  * A reference genome in fasta format
 
 --------------------------------------------------------------------------------------------------------------
 ## Dealing with strange/multiple ploidies
