@@ -12,6 +12,15 @@ Linkage disequilibrium decay, or the distribution of correlation between SNPs as
 One crucial step in the data processing steps for population genetics studies is mapping reads to a reference genome. 
 
 
+## GC content
+Understanding GC content is fundamental for deciphering the functional and evolutionary significance of genomic regions. However, easy-to-use tools for quantify the GC content of a genomic region, let alone the whole genome, are very hard to find. The GC_content.py tool is designed to scan the whole genome and report the GC content in windows.
+
+Usage: GC_content.py -G reference.fasta -w window size -s step -o output.txt
+
+Necessary files:
+  
+  * A reference genome in fasta form
+
 --------------------------------------------------------------------------------------------------------------
 ## Dealing with strange/multiple ploidies
 
