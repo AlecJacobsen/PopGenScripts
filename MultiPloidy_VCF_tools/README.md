@@ -19,4 +19,4 @@ Usage: set_hetero_haploid_to_missing.py -vcf file.vcf -l list_of_haploids_in_vcf
 
 Comments:
 
-So far, this script can only handle biallelic positions. The vcf file should have only the genotype values ( bcftools view can be used to optain such a vcf file). 
+This script can handle multiallelic positions. However The vcf file should have only the genotype values ( bcftools query can be used to optain such a vcf file). 

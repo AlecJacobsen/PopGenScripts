@@ -1,8 +1,9 @@
-##############################################################
-##                                                          ##
-## Written by Demetris Taliadoros. Last updated 22/03/2024  ##
-##                                                          ##
-##############################################################
+#!python3
+
+# >><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>
+# This tool sets heterozygot positions of haploid individuals to missing  >>
+# Written by Demetris Taliadoros. Last update 22/03/2024                  >>
+# >><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>
 
 # Import necessary modules
 
@@ -33,15 +34,22 @@ with open(args.list, 'r') as file:
     list_of_males = file.read().splitlines()
 
 # Function to set heterozygous positions to missing for every haploid individual
-def filter_homozygous(df,list_of_males):
+def filter_heterozygous(df, list_of_males):
     for c in tqdm(list_of_males, desc="Processing haploids", unit="haploid"):
-        df[c].replace('0/1','./.', inplace=True)
-        df[c].replace('1/0','./.', inplace=True)
-        df[c].replace('0|1','./.', inplace=True)
-        df[c].replace('1|0','./.', inplace=True)
+        for index, value in df[c].items():
+            if '/' in value:
+                alleles = value.split('/')
+            elif '|' in value:
+                alleles = value.split('|')
+            else:
+                continue
+
+            # Check if any alleles are dissimilar
+            if len(set(alleles)) > 1:
+                df.at[index, c] = './.'
 
 # Call the function
-filter_homozygous(vcf, list_of_males)
+filter_heterozygous(vcf, list_of_males)
 
 # Write new file
 modified_vcf_file = args.vcf.replace('.vcf', '_modified.vcf')
